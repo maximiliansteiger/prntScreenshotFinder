@@ -21,7 +21,6 @@ function getRandomLink() {
     for (let i = 0; i < 6; i++) {
         pattern += lettersAndNumbers.charAt(Math.floor(Math.random() * lettersAndNumbers.length));
     }
-    console.log(pattern);
     openPrnt(pattern);
 }
 /**
@@ -53,15 +52,14 @@ function getLoopLink() {
 /**
  * opens 10 random links
  */
-function getRandomLink() {
+function getRandomLoop() {
     let i = 0;
     let interval = setInterval(function () {
         i++;
-        getRandomPattern();
+        getRandomLink();
         if (i > 10) {
             clearInterval(interval);
         }
     }, 1000);
-
 
 }
