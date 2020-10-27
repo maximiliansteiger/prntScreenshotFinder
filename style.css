@@ -28,14 +28,16 @@ h4 {
     padding: 0vh 30vh;
 }
 
-span{
-    color:red;
+span {
+    color: red;
 }
+
 /* button */
 
 #StartButton1,
 #StartButton2,
-#StartButton3 {
+#StartButton3,
+#StartButton4 {
     background-color: #30f41e;
     border: none;
     padding: 16px 32px;
@@ -51,7 +53,8 @@ span{
 
 #StartButton1:hover,
 #StartButton2:hover,
-#StartButton3:hover {
+#StartButton3:hover,
+#StartButton4:hover {
     opacity: 1
 }
 

@@ -5,17 +5,17 @@
  */
 function openPrnt(pattern) {
 
-    let win = window.open(`https://prnt.sc/${pattern}`,'_blank');
+    let win = window.open(`https://prnt.sc/${pattern}`, '_blank');
     if (!win) {
-       
+
         alert('Please allow popups for this site / disable adblocker');
     }
 }
 
 /**
- * generates a random pattern
+ * generates a random link
  */
-function getRandomPattern() {
+function getRandomLink() {
     let pattern = "";
     let lettersAndNumbers = 'abcdefghijklmnopqrstuvwxyz0123456789';
     for (let i = 0; i < 6; i++) {
@@ -25,18 +25,18 @@ function getRandomPattern() {
     openPrnt(pattern);
 }
 /**
- * opens the given pattern
+ * opens the given link
  */
-function getSinglePattern() {
+function getSingleLink() {
     let pattern = document.getElementById("patternInput").value;
     openPrnt(pattern)
 }
 
 
 /**
- * gets the given pattern and replaces the "." with a number between 100 and the stopvalue.
+ * opens a few links ("." with a number between 100 and the stopvalue)
  */
-function getLoopPattern() {
+function getLoopLink() {
     let pattern = document.getElementById("loopInput").value;
     let stopvalue = document.getElementById("stopValue").value;
     let i = 100;
@@ -51,18 +51,17 @@ function getLoopPattern() {
 
 }
 /**
- * 
+ * opens 10 random links
  */
-function getRandomLoop() {
-    let pattern = document.getElementById("loopInput").value;
-    let stopvalue = document.getElementById("stopValue").value;
-    let i = 100;
+function getRandomLink() {
+    let i = 0;
     let interval = setInterval(function () {
-        pattern = document.getElementById("loopInput").value;
-        openPrnt(pattern.replace(".", i++));
-        if (i > stopvalue) {
+        i++;
+        getRandomPattern();
+        if (i > 10) {
             clearInterval(interval);
         }
     }, 1000);
+
 
 }
