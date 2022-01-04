@@ -53,11 +53,12 @@ function getLoopLink() {
  * opens 10 random links
  */
 function getRandomLoop() {
-    let i = 0;
+    let stopvalueRandom = document.getElementById("stopvalueRandom").value;
+    let i = 1;
     let interval = setInterval(function () {
         i++;
         getRandomLink();
-        if (i > 10) {
+        if (i > stopvalueRandom) {
             clearInterval(interval);
         }
     }, 1000);

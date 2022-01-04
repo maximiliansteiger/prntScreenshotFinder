@@ -61,7 +61,8 @@ span {
 /* input */
 #patternInput,
 #loopInput,
-#stopValue {
+#stopValue,
+#stopvalueRandom {
     background-color: #30f41e;
     border: none;
     padding: 16px 32px;
