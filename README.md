@@ -3,6 +3,8 @@
 ## The Website https://prnt.sc/ is a very popular website for sharing screenshots.
 ## Many people don't consider that the screenshots are avaiable for everyone through the generated link.
 
+### be careful some images are scam or fake.
+
 ## This script allows you to search for screenshots.
 
 
